@@ -2,48 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap');
+/* Importation des polices du Design System */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@800;900&family=Work+Sans:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 37 33% 96%;
-    --foreground: 0 0% 10%;
+    /* Fondations (Paper) - #fbf9f5 */
+    --background: 40 33% 97%;
+    --foreground: 80 4% 11%;
 
-    --card: 37 33% 97%;
-    --card-foreground: 0 0% 10%;
+    --card: 40 33% 97%;
+    --card-foreground: 80 4% 11%;
 
-    --popover: 37 33% 97%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 80 4% 11%;
 
-    --primary: 14 82% 50%;
+    /* The Pulse (Orange-Red) - #ae2900 */
+    --primary: 14 100% 34%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 37 20% 90%;
-    --secondary-foreground: 0 0% 15%;
+    /* Ink (Charcoal) - #5f5e5e */
+    --secondary: 0 1% 37%;
+    --secondary-foreground: 40 33% 97%;
 
-    --muted: 37 20% 92%;
-    --muted-foreground: 0 0% 40%;
+    /* Muted (Surface Container Low) - #f5f3ef */
+    --muted: 40 21% 95%;
+    --muted-foreground: 0 1% 37%;
 
-    --accent: 14 82% 50%;
+    /* Accents basés sur le Primaire */
+    --accent: 14 100% 34%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 85%;
-    --ring: 14 82% 50%;
+    /* Border & Inputs (Ghost borders à 10%) */
+    --border: 80 4% 11% / 0.1;
+    --input: 80 4% 11% / 0.1;
+    --ring: 14 100% 34%;
 
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Rayon de bordure éditorial */
+    --radius: 1rem;
   }
 }
 
@@ -53,30 +52,46 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', sans-serif;
+    /* Utilisation de Work Sans pour le corps du texte */
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Work Sans', sans-serif;
   }
 
+  /* Utilisation d'Epilogue pour les titres massifs */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Epilogue', sans-serif;
+    @apply font-black tracking-tighter uppercase;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Epilogue', sans-serif;
   }
 
   .font-body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  /* Règle "No-Line" : On privilégie les changements de fond aux bordures */
+  .section-alt {
+    @apply bg-muted;
   }
 }
 
+/* Animation Marquee du Ticker */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #1b1c1a;
+  color: transparent;
 }
