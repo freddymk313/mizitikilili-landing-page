@@ -1,79 +1,92 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Phone } from "lucide-react";
-
-const phones = [
-  { label: "Contact Principal", number: "+243 XXX XXX XXX" },
-  { label: "Réservations & Devis", number: "+243 XXX XXX XXX" },
-  { label: "Informations Générales", number: "+243 XXX XXX XXX" },
-];
+import React from 'react';
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", event: "", message: "" });
-
   return (
-    <section id="contact" className="py-24 md:py-32">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-display font-black text-4xl md:text-6xl text-foreground">
-            PRÊT À RÉSERVER ? <span className="text-primary">CONTACTEZ-NOUS</span>
+    <section id="contact" className="py-24 bg-muted px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter uppercase leading-none">
+            PRÊT À RÉSERVER ?
           </h2>
-        </motion.div>
-
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {phones.map((p, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
-            >
-              <Phone className="w-6 h-6 text-primary mx-auto mb-3" />
-              <p className="text-sm text-muted-foreground font-body mb-1">{p.label}</p>
-              <p className="font-display font-bold text-lg text-foreground mb-4">{p.number}</p>
-              <Button size="sm">Appeler maintenant</Button>
-            </motion.div>
-          ))}
+          <h3 className="text-primary text-3xl font-headline font-black tracking-tighter mt-4">
+            CONTACTEZ-NOUS
+          </h3>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto space-y-4"
-        >
-          <Input
-            placeholder="Votre nom"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="rounded-full px-6 h-12 font-body"
-          />
-          <Input
-            placeholder="Type d'événement"
-            value={form.event}
-            onChange={(e) => setForm({ ...form, event: e.target.value })}
-            className="rounded-full px-6 h-12 font-body"
-          />
-          <Textarea
-            placeholder="Votre message"
-            value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-            className="rounded-2xl px-6 py-4 min-h-[120px] font-body"
-          />
-          <div className="text-center pt-4">
-            <Button size="lg">ENVOYER MA DEMANDE</Button>
+        {/* Info Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {/* Phone */}
+          <div className="bg-background p-8 rounded-lg text-center border border-foreground/10">
+            <span className="material-symbols-outlined text-primary text-4xl mb-4">call</span>
+            <p className="font-headline font-bold text-lg mb-4 text-foreground">+243 812 000 000</p>
+            <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
+              APPELER MAINTENANT
+            </button>
           </div>
-        </motion.div>
+
+          {/* Mail */}
+          <div className="bg-background p-8 rounded-lg text-center border border-foreground/10">
+            <span className="material-symbols-outlined text-primary text-4xl mb-4">mail</span>
+            <p className="font-headline font-bold text-lg mb-4 text-foreground">contact@mizitikilili.com</p>
+            <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
+              NOUS ÉCRIRE
+            </button>
+          </div>
+
+          {/* Location */}
+          <div className="bg-background p-8 rounded-lg text-center border border-foreground/10">
+            <span className="material-symbols-outlined text-primary text-4xl mb-4">location_on</span>
+            <p className="font-headline font-bold text-lg mb-4 text-foreground">Gombe, Kinshasa, RDC</p>
+            <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
+              NOUS TROUVER
+            </button>
+          </div>
+        </div>
+
+        {/* Formulaire Editorial */}
+        <div className="max-w-4xl mx-auto bg-background p-12 rounded-xl shadow-sm border border-foreground/5">
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-8" onSubmit={(e) => e.preventDefault()}>
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-headline font-bold uppercase tracking-widest text-secondary">
+                Nom Complet
+              </label>
+              <input 
+                className="bg-transparent border-b border-foreground/20 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground" 
+                placeholder="Ex: Jean Dupont" 
+                type="text"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-headline font-bold uppercase tracking-widest text-secondary">
+                Type d'événement
+              </label>
+              <input 
+                className="bg-transparent border-b border-foreground/20 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground" 
+                placeholder="Ex: Mariage" 
+                type="text"
+              />
+            </div>
+
+            <div className="md:col-span-2 flex flex-col gap-2">
+              <label className="text-xs font-headline font-bold uppercase tracking-widest text-secondary">
+                Message
+              </label>
+              <textarea 
+                className="bg-transparent border-b border-foreground/20 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground resize-none" 
+                placeholder="Dites-nous en plus sur vos besoins..." 
+                rows={4}
+              ></textarea>
+            </div>
+
+            <div className="md:col-span-2 text-center mt-8">
+              <button className="bg-primary text-white px-12 py-5 rounded-full font-headline font-black uppercase tracking-[0.2em] text-sm hover:scale-105 active:scale-95 transition-transform shadow-lg shadow-primary/30">
+                ENVOYER MA DEMANDE
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );

@@ -42,7 +42,7 @@ const Founder = () => (
             <p className="text-sm italic">Photo de Ziko Piano</p>
             <p className="text-xs mt-1">(Image à fournir)</p> */}
 
-            <img alt="Portrait of Ziko Piano" className="w-full h-[700px] object-cover rounded-3xl grayscale group-hover:grayscale-0 transition-all duration-700" 
+            <img alt="Portrait of Ziko Piano" className="w-full h-[500px] md:h-[700px] object-cover rounded-3xl grayscale group-hover:grayscale-0 transition-all duration-700" 
               src="/IMG_7423.JPG"/>
           </div>
         </motion.div>

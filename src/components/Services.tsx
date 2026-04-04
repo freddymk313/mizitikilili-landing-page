@@ -23,7 +23,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface-container-low px-8">
+    <section id="service" className="py-24 bg-muted px-8">
     <div className="max-w-7xl mx-auto">
     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
     <div>
@@ -36,7 +36,7 @@ const Services = () => {
     </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
     {/* <!-- Service 1 --> */}
-    <div className="group bg-surface p-10 rounded-lg hover:shadow-xl transition-all duration-500 flex flex-col h-full border border-outline-variant/10">
+    <div className="group bg-background p-10 rounded-lg hover:shadow-xl transition-all duration-500 flex flex-col h-full *border border-outline-variant/10">
     <span className="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform">piano</span>
     <h4 className="text-2xl font-headline font-bold mb-4">Prestation Piano Live</h4>
     <p className="text-secondary mb-8 flex-grow">Une ambiance feutrée et élégante pour vos dîners, cocktails ou cérémonies privées.</p>
