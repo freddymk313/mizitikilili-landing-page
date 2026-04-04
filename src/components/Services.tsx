@@ -1,62 +1,71 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Music, Guitar, Mic2 } from "lucide-react";
+import React from 'react';
 
-const services = [
-  {
-    icon: Music,
-    title: "Prestation Piano Live",
-    description: "Notre fondateur Ziko Piano ou l'un de nos pianistes professionnels se déplace pour animer votre événement. Une expérience musicale live, authentique et mémorable.",
-  },
-  {
-    icon: Guitar,
-    title: "Location d'Instruments",
-    description: "Accédez à des instruments de musique de qualité professionnelle pour vos événements, studios ou répétitions. Piano, claviers, instruments à cordes et plus encore.",
-  },
-  {
-    icon: Mic2,
-    title: "Location d'Instrumentistes",
-    description: "Besoin d'un ensemble musical complet ? Nous mettons à votre disposition des instrumentistes professionnels pour tout type de cérémonie ou événement.",
-  },
-];
+const Services = () => {
+  const services = [
+    {
+      icon: "piano",
+      title: "Prestation Piano Live",
+      description: "Une ambiance feutrée et élégante pour vos dîners, cocktails ou cérémonies privées.",
+      delay: ""
+    },
+    {
+      icon: "speaker_group",
+      title: "Location d'Instruments",
+      description: "Un parc instrumental haut de gamme (Pianos, Sonorisation) prêt pour vos besoins techniques.",
+      delay: "md:translate-y-8" // Respect de l'asymétrie du design original
+    },
+    {
+      icon: "groups",
+      title: "Location d'Instrumentistes",
+      description: "Des musiciens de session et des orchestres complets pour accompagner vos projets artistiques.",
+      delay: ""
+    }
+  ];
 
-const Services = () => (
-  <section id="services" className="py-24 md:py-32">
-    <div className="container mx-auto px-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <h2 className="font-display font-black text-4xl md:text-6xl text-foreground">
-          NOS <span className="text-primary">PRESTATIONS</span>
-        </h2>
-      </motion.div>
-
-      <div className="grid md:grid-cols-3 gap-8">
-        {services.map((service, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
-            className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-              <service.icon className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="font-display font-bold text-xl mb-4 text-foreground">{service.title}</h3>
-            <p className="text-muted-foreground font-body leading-relaxed mb-6">{service.description}</p>
-            <Button variant="outline" size="sm">
-              En savoir plus →
-            </Button>
-          </motion.div>
-        ))}
-      </div>
+  return (
+    <section className="py-24 bg-surface-container-low px-8">
+    <div className="max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+    <div>
+    <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter">NOS SERVICES</h2>
+    <h3 className="text-primary text-2xl font-headline font-bold tracking-widest mt-2 uppercase">PRESTATIONS</h3>
     </div>
-  </section>
-);
+    <div className="text-secondary max-w-sm">
+                            Une expertise multi-facettes pour répondre à toutes vos exigences sonores.
+                        </div>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {/* <!-- Service 1 --> */}
+    <div className="group bg-surface p-10 rounded-lg hover:shadow-xl transition-all duration-500 flex flex-col h-full border border-outline-variant/10">
+    <span className="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform">piano</span>
+    <h4 className="text-2xl font-headline font-bold mb-4">Prestation Piano Live</h4>
+    <p className="text-secondary mb-8 flex-grow">Une ambiance feutrée et élégante pour vos dîners, cocktails ou cérémonies privées.</p>
+    <button className="text-primary font-headline font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                                En savoir plus <span className="material-symbols-outlined text-lg">arrow_forward</span>
+    </button>
+    </div>
+    {/* <!-- Service 2 --> */}
+    <div className="group bg-surface p-10 rounded-lg hover:shadow-xl transition-all duration-500 flex flex-col h-full border border-outline-variant/10 translate-y-0 md:translate-y-8">
+    <span className="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform">speaker_group</span>
+    <h4 className="text-2xl font-headline font-bold mb-4">Location d'Instruments</h4>
+    <p className="text-secondary mb-8 flex-grow">Un parc instrumental haut de gamme (Pianos, Sonorisation) prêt pour vos besoins techniques.</p>
+    <button className="text-primary font-headline font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                                En savoir plus <span className="material-symbols-outlined text-lg">arrow_forward</span>
+    </button>
+    </div>
+    {/* <!-- Service 3 --> */}
+    <div className="group bg-surface p-10 rounded-lg hover:shadow-xl transition-all duration-500 flex flex-col h-full border border-outline-variant/10">
+    <span className="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform">groups</span>
+    <h4 className="text-2xl font-headline font-bold mb-4">Location d'Instrumentistes</h4>
+    <p className="text-secondary mb-8 flex-grow">Des musiciens de session et des orchestres complets pour accompagner vos projets artistiques.</p>
+    <button className="text-primary font-headline font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                                En savoir plus <span className="material-symbols-outlined text-lg">arrow_forward</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    </section>
+  );
+};
 
 export default Services;

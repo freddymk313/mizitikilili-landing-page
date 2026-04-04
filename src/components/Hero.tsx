@@ -49,10 +49,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Button size="lg" onClick={() => scrollTo("contact")}>
+          <Button size="default" onClick={() => scrollTo("contact")}>
             RÉSERVER UNE PRESTATION
           </Button>
-          <Button variant="outline" size="lg" onClick={() => scrollTo("services")}>
+          <Button variant="outline" size="default" onClick={() => scrollTo("services")}>
             DÉCOUVRIR NOS SERVICES
           </Button>
         </motion.div>
