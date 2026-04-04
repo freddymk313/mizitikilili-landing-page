@@ -37,10 +37,13 @@ const Founder = () => (
           viewport={{ once: true }}
           className="flex items-center justify-center"
         >
-          <div className="w-full aspect-[4/5] rounded-2xl border-2 border-primary/30 bg-card flex flex-col items-center justify-center text-muted-foreground font-body">
-            <span className="text-5xl mb-4">📷</span>
+          <div className="w-full aspect-[4/5] rounded-2xl *border-2 border-primary/30 bg-card flex flex-col items-center justify-center text-muted-foreground font-body">
+            {/* <span className="text-5xl mb-4">📷</span>
             <p className="text-sm italic">Photo de Ziko Piano</p>
-            <p className="text-xs mt-1">(Image à fournir)</p>
+            <p className="text-xs mt-1">(Image à fournir)</p> */}
+
+            <img alt="Portrait of Ziko Piano" className="w-full h-[700px] object-cover rounded-3xl grayscale group-hover:grayscale-0 transition-all duration-700" 
+              src="/IMG_7423.JPG"/>
           </div>
         </motion.div>
       </div>
