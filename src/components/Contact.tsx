@@ -1,4 +1,4 @@
-import React from 'react';
+import {Button} from '@/components/ui/button';
 
 const Contact = () => {
   return (
@@ -17,7 +17,7 @@ const Contact = () => {
         {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {/* Phone */}
-          <div className="bg-background p-8 rounded-lg text-center border border-foreground/10">
+          <div className="bg-background p-8 rounded-3xl text-center border border-background">
             <span className="material-symbols-outlined text-primary text-4xl mb-4">call</span>
             <p className="font-headline font-bold text-lg mb-4 text-foreground">+243 812 000 000</p>
             <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
@@ -26,7 +26,7 @@ const Contact = () => {
           </div>
 
           {/* Mail */}
-          <div className="bg-background p-8 rounded-lg text-center border border-foreground/10">
+          <div className="bg-background p-8 rounded-3xl text-center border border-background">
             <span className="material-symbols-outlined text-primary text-4xl mb-4">mail</span>
             <p className="font-headline font-bold text-lg mb-4 text-foreground">contact@mizitikilili.com</p>
             <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
 
           {/* Location */}
-          <div className="bg-background p-8 rounded-lg text-center border border-foreground/10">
+          <div className="bg-background p-8 rounded-3xl text-center border border-background">
             <span className="material-symbols-outlined text-primary text-4xl mb-4">location_on</span>
             <p className="font-headline font-bold text-lg mb-4 text-foreground">Gombe, Kinshasa, RDC</p>
             <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
@@ -45,7 +45,7 @@ const Contact = () => {
         </div>
 
         {/* Formulaire Editorial */}
-        <div className="max-w-4xl mx-auto bg-background p-12 rounded-xl shadow-sm border border-foreground/5">
+        <div className="max-w-4xl mx-auto bg-background p-12 rounded-3xl shadow-sm *border border-background">
           <form className="grid grid-cols-1 md:grid-cols-2 gap-8" onSubmit={(e) => e.preventDefault()}>
             <div className="flex flex-col gap-2">
               <label className="text-xs font-headline font-bold uppercase tracking-widest text-secondary">
@@ -81,9 +81,9 @@ const Contact = () => {
             </div>
 
             <div className="md:col-span-2 text-center mt-8">
-              <button className="bg-primary text-white px-12 py-5 rounded-full font-headline font-black uppercase tracking-[0.2em] text-sm hover:scale-105 active:scale-95 transition-transform shadow-lg shadow-primary/30">
+              <Button className='w-[35%]'>
                 ENVOYER MA DEMANDE
-              </button>
+              </Button>
             </div>
           </form>
         </div>
