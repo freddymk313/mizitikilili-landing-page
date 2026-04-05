@@ -1,14 +1,14 @@
 import { SoundWaveIcon } from "./Navbar";
 
 const Footer = () => (
-  <footer className="border-t border-border py-12">
+  <footer className="*border-t border-border py-12">
     <div className="container mx-auto px-6">
       <div className="grid md:grid-cols-3 gap-8 items-center">
         <div className="flex items-center gap-2">
           <SoundWaveIcon />
           <div>
             <span className="font-display font-bold text-foreground">MIZITIKILILI</span>
-            <p className="text-sm text-muted-foreground font-body italic">La musique au service de vos moments.</p>
+            {/* <p className="text-sm text-muted-foreground font-body italic">La musique au service de vos moments.</p> */}
           </div>
         </div>
 
@@ -34,7 +34,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-8 pt-6 border-t border-border text-center text-sm text-muted-foreground font-body">
-        © 2025 Mizitikilili · Tous droits réservés
+        © 2025 Mizitikilili · Tous droits réservés | Concu par <a href="https://nordevagency.vercel.app" className="text-primary hover:underline">Nordev Agency</a>
       </div>
     </div>
   </footer>
