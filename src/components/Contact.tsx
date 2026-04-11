@@ -81,7 +81,7 @@ const Contact = () => {
             </div>
 
             <div className="md:col-span-2 text-center mt-8">
-              <Button className='w-[35%]'>
+              <Button className='w-full md:w-[35%]'>
                 ENVOYER MA DEMANDE
               </Button>
             </div>
