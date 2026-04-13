@@ -45,14 +45,15 @@ const Contact = () => {
         </div>
 
         {/* Formulaire Editorial */}
-        <div className="max-w-4xl mx-auto bg-background p-12 rounded-3xl *shadow-sm *border border-background">
+        <div className="max-w-4xl mx-auto bg-background p-12 rounded-[40px] *shadow-sm *border border-background">
           <form className="grid grid-cols-1 md:grid-cols-2 gap-8" onSubmit={(e) => e.preventDefault()}>
             <div className="flex flex-col gap-2">
               <label className="text-xs font-headline font-bold uppercase tracking-widest text-secondary">
                 Nom Complet
               </label>
               <input 
-                className="bg-transparent border-b border-foreground/20 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground" 
+                // className="bg-transparent border-b border-background focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground" 
+                className="bg-transparent border-b border-foreground/15 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground" 
                 placeholder="Ex: Jean Dupont" 
                 type="text"
               />
@@ -63,7 +64,7 @@ const Contact = () => {
                 Type d'événement
               </label>
               <input 
-                className="bg-transparent border-b border-foreground/20 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground" 
+                className="bg-transparent border-b border-foreground/15 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground" 
                 placeholder="Ex: Mariage" 
                 type="text"
               />
@@ -74,7 +75,7 @@ const Contact = () => {
                 Message
               </label>
               <textarea 
-                className="bg-transparent border-b border-foreground/20 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground resize-none" 
+                className="bg-transparent border-b border-foreground/15 focus:border-primary outline-none px-0 py-3 transition-colors font-body text-foreground resize-none" 
                 placeholder="Dites-nous en plus sur vos besoins..." 
                 rows={4}
               ></textarea>

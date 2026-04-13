@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="*border-t border-border py-12">
     <div className="container mx-auto px-6">
       <div className="grid md:grid-cols-3 gap-8 items-center">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-center md:justify-start gap-2">
           <SoundWaveIcon />
           <div>
             <span className="font-display font-bold text-foreground">
@@ -31,24 +31,16 @@ const Footer = () => (
           ))}
         </div>
 
-        <div className="flex gap-2 justify-end">
-          {/* {["Facebook", "Instagram", "WhatsApp"].map((social) => (
-            <a
-              key={social}
-              href="#"
-              className="text-muted-foreground hover:text-primary transition-colors text-sm font-body"
-            >
-              {social}
-            </a>
-          ))} */}
+        <div className="flex gap-2 justify-center md:justify-end">
           <div className="bg-primary rounded-sm p-2">
             <Facebook className="h-[18px] w-[18px] text-white" />
           </div>
           <div className="bg-primary rounded-sm p-2">
             <Instagram className="h-[17px] w-[17px] text-white" />
           </div>
-          {/* <Instagram className="h-5 w-5" /> */}
-          {/* < /> */}
+          <div className="bg-primary rounded-sm p-2">
+            <Instagram className="h-[17px] w-[17px] text-white" />
+          </div>
         </div>
       </div>
 

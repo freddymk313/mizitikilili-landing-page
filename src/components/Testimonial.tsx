@@ -8,7 +8,7 @@ const Testimonial = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <span className="text-primary text-8xl font-display leading-none block mb-6">❝</span>
+        <span className="text-primary text-5xl md:text-8xl font-display leading-none block mb-6">❝</span>
         <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-snug italic">
           "Ziko Piano a transformé notre soirée de gala en un moment inoubliable. Professionnalisme, ponctualité et talent — Mizitikilili dépasse toujours les attentes."
         </blockquote>
