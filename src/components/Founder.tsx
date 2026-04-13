@@ -51,7 +51,7 @@ const Founder = () => (
 
             <img
               alt="Portrait of Ziko Piano"
-              className="w-full h-[500px] md:h-[700px] object-cover rounded-[45px] grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="w-full h-[500px] md:h-[700px] object-cover rounded-[45px] grayscale-10 group-hover:grayscale-0 transition-all duration-700"
               src="/IMG_7423.JPG"
             />
           </div>
