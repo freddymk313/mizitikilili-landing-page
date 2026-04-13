@@ -19,7 +19,7 @@ const Contact = () => {
           {/* Phone */}
           <div className="bg-background p-8 rounded-3xl text-center border border-background">
             <span className="material-symbols-outlined text-primary text-4xl mb-4">call</span>
-            <p className="font-headline font-bold text-lg mb-4 text-foreground">+243 812 000 000</p>
+            <p className="font-headline font-bold text-lg mb-4 text-foreground">+243 905 514 389</p>
             <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
               APPELER MAINTENANT
             </button>
@@ -28,7 +28,7 @@ const Contact = () => {
           {/* Mail */}
           <div className="bg-background p-8 rounded-3xl text-center border border-background">
             <span className="material-symbols-outlined text-primary text-4xl mb-4">mail</span>
-            <p className="font-headline font-bold text-lg mb-4 text-foreground">contact@mizitikilili.com</p>
+            <p className="font-headline font-bold text-lg mb-4 text-foreground">freddymk.se@gmail.com</p>
             <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
               NOUS ÉCRIRE
             </button>
@@ -37,7 +37,7 @@ const Contact = () => {
           {/* Location */}
           <div className="bg-background p-8 rounded-3xl text-center border border-background">
             <span className="material-symbols-outlined text-primary text-4xl mb-4">location_on</span>
-            <p className="font-headline font-bold text-lg mb-4 text-foreground">Gombe, Kinshasa, RDC</p>
+            <p className="font-headline font-bold text-lg mb-4 text-foreground">Lubumbashi, Kasumbalesa, RDC</p>
             <button className="w-full py-3 border-2 border-primary text-primary rounded-full font-headline font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all">
               NOUS TROUVER
             </button>
