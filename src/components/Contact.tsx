@@ -45,7 +45,7 @@ const Contact = () => {
         </div>
 
         {/* Formulaire Editorial */}
-        <div className="max-w-4xl mx-auto bg-background p-12 rounded-[40px] *shadow-sm *border border-background">
+        <div className="max-w-4xl mx-auto bg-background p-10 md:p-12 rounded-[40px] *shadow-sm *border border-background">
           <form className="grid grid-cols-1 md:grid-cols-2 gap-8" onSubmit={(e) => e.preventDefault()}>
             <div className="flex flex-col gap-2">
               <label className="text-xs font-headline font-bold uppercase tracking-widest text-secondary">
