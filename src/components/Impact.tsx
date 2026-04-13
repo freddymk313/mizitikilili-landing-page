@@ -57,7 +57,7 @@ const Impact = () => (
         ))}
       </div>
 
-      <div className="border-t border-border pt-12 max-w-3xl mx-auto">
+      <div className="*border-t border-border pt-12 max-w-3xl mx-auto">
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
