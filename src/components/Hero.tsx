@@ -40,7 +40,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-8 text-lg md:text-xl text-muted-foreground font-body italic max-w-xl mx-auto"
         >
-          "La musique au service de vos moments."
+          "La musique au service de vos prestation." 
         </motion.p>
 
         <motion.div
