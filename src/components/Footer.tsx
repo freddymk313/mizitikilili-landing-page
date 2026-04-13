@@ -1,3 +1,4 @@
+import { Facebook, Instagram } from "lucide-react";
 import { SoundWaveIcon } from "./Navbar";
 
 const Footer = () => (
@@ -30,8 +31,8 @@ const Footer = () => (
           ))}
         </div>
 
-        <div className="flex gap-4 justify-end">
-          {["Facebook", "Instagram", "WhatsApp"].map((social) => (
+        <div className="flex gap-2 justify-end">
+          {/* {["Facebook", "Instagram", "WhatsApp"].map((social) => (
             <a
               key={social}
               href="#"
@@ -39,7 +40,15 @@ const Footer = () => (
             >
               {social}
             </a>
-          ))}
+          ))} */}
+          <div className="bg-primary rounded-sm p-2">
+            <Facebook className="h-[18px] w-[18px] text-white" />
+          </div>
+          <div className="bg-primary rounded-sm p-2">
+            <Instagram className="h-[17px] w-[17px] text-white" />
+          </div>
+          {/* <Instagram className="h-5 w-5" /> */}
+          {/* < /> */}
         </div>
       </div>
 
